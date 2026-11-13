@@ -1,0 +1,26 @@
+{
+  "keyboard": {
+    "steer_left": ["left", "a"],
+    "steer_right": ["right", "d"],
+    "acceleration": ["up", "w"],
+    "brake": ["down", "s"],
+    "fire": ["space"],
+    "rescue": ["r"],
+    "drift": ["left shift", "right shift"],
+    "nitro": ["left ctrl", "right ctrl"],
+    "steer_rate_per_second": 6.0
+  },
+  "gamepad": {
+    "steer_axis": 0,
+    "throttle_axis": null,
+    "throttle_axis_min": -1.0,
+    "throttle_axis_max": 1.0,
+    "acceleration_button": 0,
+    "brake_button": 1,
+    "fire_button": 2,
+    "rescue_button": 3,
+    "drift_button": 4,
+    "nitro_button": 5,
+    "deadzone": 0.12
+  }
+}

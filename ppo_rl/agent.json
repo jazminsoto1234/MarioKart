@@ -1,0 +1,13 @@
+{
+  "name": "ppo_stk",
+  "entry": "agent.py",
+  "class": "Agent",
+  "config": {
+    "checkpoint": "../runs/ppo_rl/stage4a/policy.pt",
+    "device": "cuda",
+    "decide_every": 2,
+    "stuck_seconds": 3.0,
+    "stuck_diff": 2.0,
+    "warmup_seconds": 8.0
+  }
+}

@@ -1,0 +1,11 @@
+# Etapas 1–2: caché a 15 Hz + AWR-BC y crítico offline
+run_name: pretrain
+offline:
+  data_root: data/local
+  cache_dir: ppo_rl/cache
+  epochs: 30
+  batch_size: 128
+  awr_beta: 2.0
+  awr_warmup_epochs: 3
+session:
+  max_hours: 2

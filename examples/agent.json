@@ -1,0 +1,9 @@
+{
+  "name": "agent_01",
+  "entry": "agent_template.py",
+  "class": "Agent",
+  "config": {
+    "checkpoint": "weights/model.pt",
+    "device": "cpu"
+  }
+}

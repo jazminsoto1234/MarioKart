@@ -1,0 +1,17 @@
+# Etapa 4B: tráfico (r_pass activo), sin ítems
+run_name: stage4b
+ppo:
+  num_envs: 4
+  rollout_steps: 512
+  total_steps: 20000000
+  init_checkpoint: runs/ppo_rl/stage4a/policy.pt
+  critic_warmup_updates: 10        # el crítico se adapta a la nueva mezcla
+  actor_lr_ramp_updates: 20
+  kl_ref_coef_cont: 0.1
+  kl_ref_coef_disc: 0.2
+env:
+  scenarios:
+    - {name: time_trial, quota: 0.3, num_karts: [1], difficulty: [0], laps: 1, items: false, max_seconds: 180}
+    - {name: traffic, quota: 0.7, num_karts: [4, 6, 8], difficulty: [0, 1, 2], laps: 1, items: false, max_seconds: 200}
+session:
+  max_hours: 2

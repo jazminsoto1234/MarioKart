@@ -1,0 +1,18 @@
+# Etapas 3 + 4A: warmup del crítico y contrarreloj (solo steer, lon y drift)
+run_name: stage4a
+ppo:
+  num_envs: 4
+  rollout_steps: 512
+  total_steps: 10000000
+  init_checkpoint: runs/ppo_rl/pretrain/bc.pt
+  critic_warmup_updates: 30        # Etapa 3: actor congelado
+  actor_lr_ramp_updates: 50
+  freeze_encoder_updates: 30
+  kl_ref_coef_cont: 0.5
+  kl_ref_coef_disc: 1.0
+  kl_ref_decay: 0.995
+env:
+  scenarios:
+    - {name: time_trial, quota: 1.0, num_karts: [1], difficulty: [0], laps: 1, items: false, max_seconds: 180}
+session:
+  max_hours: 2

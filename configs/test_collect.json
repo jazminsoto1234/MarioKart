@@ -1,0 +1,22 @@
+{
+  "track": "snowmountain",
+  "kart": "random",
+  "bot_kart": "random",
+  "kart_pool": null,
+  "avoid_duplicate_karts": true,
+  "show_names": false,
+  "laps": 3,
+  "num_karts": 8,
+  "difficulty": 2,
+  "seed": 42,
+  "player_slot": 0,
+  "reverse": false,
+  "width": 640,
+  "height": 360,
+  "tick_hz": 60,
+  "policy_hz": 30,
+  "rgb_hz": 30,
+  "quality": "sd",
+  "overlay": true,
+  "max_seconds": 30
+}

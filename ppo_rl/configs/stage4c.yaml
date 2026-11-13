@@ -1,0 +1,18 @@
+# Etapa 4C: ítems (fire y nitro desenmascarados en full_race)
+run_name: stage4c
+ppo:
+  num_envs: 4
+  rollout_steps: 512
+  total_steps: 30000000
+  init_checkpoint: runs/ppo_rl/stage4b/policy.pt
+  critic_warmup_updates: 10
+  actor_lr_ramp_updates: 20
+  kl_ref_coef_cont: 0.1
+  kl_ref_coef_disc: 0.5            # KL discreto más alto al abrir ítems
+env:
+  scenarios:
+    - {name: time_trial, quota: 0.2, num_karts: [1], difficulty: [0], laps: 1, items: false, max_seconds: 180}
+    - {name: traffic, quota: 0.3, num_karts: [4, 6, 8], difficulty: [0, 1, 2], laps: 1, items: false, max_seconds: 200}
+    - {name: full_race, quota: 0.5, num_karts: [8], difficulty: [1, 2], laps: 1, items: true, max_seconds: 240}
+session:
+  max_hours: 2

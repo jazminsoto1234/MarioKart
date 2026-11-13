@@ -1,0 +1,40 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.whl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos y resultados generados (grabaciones, checkpoints, logs)
+data/
+runs/
+*.h5
+*.npz
+*.mp4
+*.ffmpeg.log
+*.ppm
+*.pt
+*.pth
+*.ckpt
+
+# Herramientas / IDE
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
